@@ -11,7 +11,7 @@ sidebar_position: 1
 
 You entered a specialised asylum recently because your family, society — and perhaps you yourself — believe you need help. Your mind is coming apart. How far inward will you descend before nothing remains to be revealed?
 
-**Unmind** is a short, closed and demanding Resonance role-playing game for one GM and 2 to 4 players, with 3 players as the target configuration.
+**Unmind** is a short, closed and demanding [Resonance](https://aleascript.github.io/resonance) role-playing game for one GM and 2 to 4 players, with 3 players as the target configuration.
 
 The fictional **Unmind syndrome** consumes what a person reveals of themselves. Each loss exposes a deeper layer. Treatment can genuinely slow the process, but its immediate price is silence.
 

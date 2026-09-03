@@ -124,6 +124,24 @@ body {
   box-shadow: none;
 }
 
+/* Only the custom `:::design` type receives the internal clinical treatment. */
+.theme-admonition-design {
+  position: relative;
+  border-left-color: var(--site-primary);
+  background: color-mix(in srgb, var(--site-primary) 6%, var(--site-surface));
+}
+
+.theme-admonition-design::before {
+  content: 'DESIGN // INTERNAL NOTE';
+  display: block;
+  margin: -0.25rem 0 0.65rem;
+  color: var(--site-muted);
+  font-family: var(--site-font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .menu__link,
 .table-of-contents__link {
   font-size: 0.92rem;
@@ -145,6 +163,12 @@ body {
 
 .footer--dark {
   --ifm-footer-background-color: color-mix(in srgb, var(--site-background) 78%, black);
+}
+
+.footer__copyright a {
+  color: var(--site-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 @media (min-width: 997px) {
