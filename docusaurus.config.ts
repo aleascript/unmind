@@ -14,6 +14,34 @@ function normalizeBaseUrl(value: string): string {
   return `/${value}`.replace(/\/{2,}/g, '/').replace(/\/?$/, '/');
 }
 
+function projectLink(label: string, href: string): string {
+  return `<a href="${href}">${label}</a>`;
+}
+
+function footerCredit(): string {
+  const credits = [`© ${new Date().getFullYear()} ${site.author}`];
+
+  if (site.lineage.designedWith) {
+    credits.push(
+      `designed with ${projectLink(
+        site.lineage.designedWith.label,
+        site.lineage.designedWith.href,
+      )}`,
+    );
+  }
+
+  if (site.lineage.poweredBy) {
+    credits.push(
+      `powered by ${projectLink(
+        site.lineage.poweredBy.label,
+        site.lineage.poweredBy.href,
+      )}`,
+    );
+  }
+
+  return credits.join(' · ');
+}
+
 const isUserPagesRepository = projectName === `${organizationName}.github.io`;
 const url = (process.env.SITE_URL ?? `https://${organizationName}.github.io`).replace(/\/$/, '');
 const baseUrl = normalizeBaseUrl(
@@ -90,7 +118,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `© ${new Date().getFullYear()} ${site.author}`,
+      copyright: footerCredit(),
     },
     prism: {
       theme: prismThemes.github,
