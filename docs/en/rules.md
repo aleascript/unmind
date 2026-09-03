@@ -117,12 +117,12 @@ The exact colours are free, but their correspondence must be the same for every 
 
 Each player chooses a different booklet:
 
-- [Watch](veiller.md);
-- [Serve](servir.md);
-- [Please](plaire.md);
-- [Fade](s-effacer.md);
-- [Order](ordonner.md);
-- [Resist](resister.md).
+- [Watch](watch.md);
+- [Serve](serve.md);
+- [Please](please.md);
+- [Fade](fade.md);
+- [Order](order.md);
+- [Resist](resist.md).
 
 The booklet names a human gesture through which the character is still trying to live with others. That gesture can protect, connect or save. It can also become the only way left for them to answer the world.
 
