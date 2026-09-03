@@ -39,7 +39,9 @@ No thread should resolve these tensions in advance.
 ## Fragment bank
 
 :::note
+
 Choosing a fragment does not fix a complete history. Its relationship with other depths will be created secretly by the player, then discovered in play.
+
 :::
 
 ### Mask

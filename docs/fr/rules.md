@@ -8,9 +8,11 @@ sidebar_position: 2
 # Règles
 
 :::note
+
 **Vous n’êtes pas ici par erreur.**
 
 Depuis peu, vous êtes pensionnaires d’un asile spécialisé. Vos proches, votre famille ou la société ont reconnu les signes du **syndrome d’Unmind**. Vous avez accepté votre placement parce que vous pensez — ou pensiez en arrivant — que cet endroit pourrait vous aider.
+
 :::
 
 ## Proposition
@@ -81,8 +83,9 @@ Avant de jouer :
 - distinguer une interruption de sécurité d’un silence choisi dans la fiction ;
 - prévoir un débrief de sortie de fiction.
 
-:::danger Jeton-pilule
+:::danger[Jeton-pilule]
 Utiliser uniquement un **jeton non ingérable** en forme de pilule ou de gélule. Ne jamais employer un médicament réel ni un objet destiné à être avalé.
+
 :::
 
 ## Matériel
@@ -326,7 +329,9 @@ L’absence de traitement brise le cycle de silence et accélère simultanément
 ## Fin de la partie
 
 :::warning
+
 **La fin est déclenchée lorsqu’un même joueur a joué les deux fragments Monde intérieur de ses deux fils.**
+
 :::
 
 Un Monde intérieur transformé par une Intégration reste le Monde intérieur de son fil et compte lorsqu’il est joué.

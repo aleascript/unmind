@@ -39,7 +39,9 @@ Aucun fil ne devrait résoudre ces tensions à l’avance.
 ## Banque de fragments
 
 :::note
+
 Choisir un fragment ne fixe pas une histoire complète. Sa relation avec les autres profondeurs sera créée secrètement par le joueur, puis découverte en jeu.
+
 :::
 
 ### Masque

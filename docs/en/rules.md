@@ -8,9 +8,11 @@ sidebar_position: 2
 # Rules
 
 :::note
+
 **You are not here by mistake.**
 
 You recently became residents of a specialised asylum. Your loved ones, your family or society recognised the signs of **Unmind syndrome**. You accepted your placement because you believe — or believed when you arrived — that this place could help you.
+
 :::
 
 ## Premise
@@ -81,8 +83,10 @@ Before play:
 - distinguish a safety interruption from silence chosen in the fiction;
 - plan a debrief that explicitly exits the fiction.
 
-:::danger Pill token
+:::danger[Pill token]
+
 Use only a **non-ingestible token** shaped like a pill or capsule. Never use real medication or anything intended to be swallowed.
+
 :::
 
 ## Materials
@@ -326,7 +330,9 @@ The absence of treatment breaks the cycle of silence while accelerating every ch
 ## End of the game
 
 :::warning
+
 **The end is triggered when the same player has played the Inner World fragment from both of their threads.**
+
 :::
 
 An Inner World transformed by Integration remains the Inner World of its thread and counts when played.

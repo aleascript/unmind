@@ -18,6 +18,8 @@ Le **syndrome d’Unmind**, entièrement fictif, consume ce qu’une personne r�
 - [Lire les règles](rules.md)
 - [Découvrir les six livrets](booklets.md)
 
-:::caution Sécurité
+:::caution[Sécurité]
+
 Unmind aborde notamment l’enfermement psychiatrique, l’effilochement psychique, la médication, la coercition thérapeutique, l’isolement, le deuil et les perceptions privées ou délirantes. Le syndrome d’Unmind est entièrement fictif et ne représente aucune pathologie réelle.
+
 :::

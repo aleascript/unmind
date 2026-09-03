@@ -18,6 +18,8 @@ The fictional **Unmind syndrome** consumes what a person reveals of themselves. 
 - [Read the rules](rules.md)
 - [Discover the six booklets](booklets.md)
 
-:::caution Safety
+:::caution[Safety]
+
 Unmind deals with psychiatric confinement, psychological unraveling, medication, therapeutic coercion, isolation, grief and private or delusional perceptions. The Unmind syndrome is entirely fictional and represents no real pathology.
+
 :::
