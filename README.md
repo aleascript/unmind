@@ -1,6 +1,6 @@
 # Unmind
 
-Public bilingual rules site for **Unmind**, built with the Resonance site template and Docusaurus.
+Public bilingual rules site for **Unmind**, built with the [Resonance site template](https://github.com/aleascript/resonance-site-template) and Docusaurus.
 
 ## Local development
 
