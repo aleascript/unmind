@@ -124,13 +124,14 @@ body {
   box-shadow: none;
 }
 
-.theme-admonition-note {
+/* Only the custom `:::design` type receives the internal clinical treatment. */
+.theme-admonition-design .theme-admonition-note {
   position: relative;
   border-left-color: var(--site-primary);
   background: color-mix(in srgb, var(--site-primary) 6%, var(--site-surface));
 }
 
-.theme-admonition-note::before {
+.theme-admonition-design .theme-admonition-note::before {
   content: 'DESIGN // INTERNAL NOTE';
   display: block;
   margin: -0.25rem 0 0.65rem;
