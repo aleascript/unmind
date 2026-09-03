@@ -23,12 +23,12 @@ This keeps the residents close to us. The booklets are not six disguised diagnos
 
 | Booklet | Survival gesture | Risk of closure |
 | --- | --- | --- |
-| **[Watch](veiller.md)** | Anticipate danger so nothing can surprise you again. | Everything becomes a warning sign; resting means abandoning someone. |
-| **[Serve](servir.md)** | Become necessary so you will not be abandoned. | Exist only through other people's needs; sometimes create the need you know how to meet. |
-| **[Please](plaire.md)** | Regulate others through charm, humour or agreement. | Become unable to bear disagreement, silence or a face that can no longer be read. |
-| **[Fade](s-effacer.md)** | Give nothing to hold on to. | Become unreachable even to those who would try to find, love or protect you. |
-| **[Order](ordonner.md)** | Make the world predictable through rules, signs or rituals. | Confuse constructed coherence with reality and experience every exception as a threat. |
-| **[Resist](resister.md)** | Preserve your existence through refusal and opposition. | Become unable to recognise an offered hand without seeing an attempt at control. |
+| **[Watch](watch.md)** | Anticipate danger so nothing can surprise you again. | Everything becomes a warning sign; resting means abandoning someone. |
+| **[Serve](serve.md)** | Become necessary so you will not be abandoned. | Exist only through other people's needs; sometimes create the need you know how to meet. |
+| **[Please](please.md)** | Regulate others through charm, humour or agreement. | Become unable to bear disagreement, silence or a face that can no longer be read. |
+| **[Fade](fade.md)** | Give nothing to hold on to. | Become unreachable even to those who would try to find, love or protect you. |
+| **[Order](order.md)** | Make the world predictable through rules, signs or rituals. | Confuse constructed coherence with reality and experience every exception as a threat. |
+| **[Resist](resist.md)** | Preserve your existence through refusal and opposition. | Become unable to recognise an offered hand without seeing an attempt at control. |
 
 ## Shared architecture
 

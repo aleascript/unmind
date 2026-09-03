@@ -23,12 +23,12 @@ Cette formulation maintient les pensionnaires proches de nous. Elle évite que l
 
 | Livret | Geste de survie | Risque de fermeture |
 | --- | --- | --- |
-| **[Veiller](veiller.md)** | Anticiper le danger pour que rien ne surprenne plus. | Tout devient signe avant-coureur ; se reposer revient à abandonner quelqu’un. |
-| **[Servir](servir.md)** | Devenir nécessaire pour ne pas être abandonné. | N’exister qu’à travers les besoins des autres ; provoquer parfois le besoin que l’on sait combler. |
-| **[Plaire](plaire.md)** | Réguler l’autre par le charme, l’humour ou l’accord. | Ne plus pouvoir supporter le désaccord, le silence ou un visage devenu illisible. |
-| **[S’effacer](s-effacer.md)** | Ne pas offrir de prise. | Devenir introuvable même pour ceux qui voudraient rejoindre, aimer ou protéger. |
-| **[Ordonner](ordonner.md)** | Rendre le monde prévisible par les règles, les signes ou les rituels. | Confondre la cohérence construite avec la réalité et vivre toute exception comme une menace. |
-| **[Résister](resister.md)** | Préserver son existence par le refus et l’opposition. | Ne plus pouvoir reconnaître une main tendue sans y percevoir une tentative d’emprise. |
+| **[Veiller](watch.md)** | Anticiper le danger pour que rien ne surprenne plus. | Tout devient signe avant-coureur ; se reposer revient à abandonner quelqu’un. |
+| **[Servir](serve.md)** | Devenir nécessaire pour ne pas être abandonné. | N’exister qu’à travers les besoins des autres ; provoquer parfois le besoin que l’on sait combler. |
+| **[Plaire](please.md)** | Réguler l’autre par le charme, l’humour ou l’accord. | Ne plus pouvoir supporter le désaccord, le silence ou un visage devenu illisible. |
+| **[S’effacer](fade.md)** | Ne pas offrir de prise. | Devenir introuvable même pour ceux qui voudraient rejoindre, aimer ou protéger. |
+| **[Ordonner](order.md)** | Rendre le monde prévisible par les règles, les signes ou les rituels. | Confondre la cohérence construite avec la réalité et vivre toute exception comme une menace. |
+| **[Résister](resist.md)** | Préserver son existence par le refus et l’opposition. | Ne plus pouvoir reconnaître une main tendue sans y percevoir une tentative d’emprise. |
 
 ## Architecture commune
 

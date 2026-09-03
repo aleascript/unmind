@@ -1,7 +1,7 @@
 ---
-id: veiller
+id: watch
 title: Watch
-slug: /booklets/veiller
+slug: /booklets/watch
 ---
 
 # Watch

@@ -8,7 +8,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Booklets',
       link: {type: 'doc', id: 'booklets'},
-      items: ['veiller', 'servir', 'plaire', 's-effacer', 'ordonner', 'resister'],
+      items: ['watch', 'serve', 'please', 'fade', 'order', 'resist'],
     },
   ],
 };
