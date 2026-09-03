@@ -1,0 +1,154 @@
+/* Base token bridge inherited from resonance-site-template. */
+:root {
+  --ifm-color-primary: var(--site-primary);
+  --ifm-color-primary-dark: color-mix(in srgb, var(--site-primary) 88%, black);
+  --ifm-color-primary-darker: color-mix(in srgb, var(--site-primary) 80%, black);
+  --ifm-color-primary-darkest: color-mix(in srgb, var(--site-primary) 66%, black);
+  --ifm-color-primary-light: color-mix(in srgb, var(--site-primary) 88%, white);
+  --ifm-color-primary-lighter: color-mix(in srgb, var(--site-primary) 80%, white);
+  --ifm-color-primary-lightest: color-mix(in srgb, var(--site-primary) 64%, white);
+  --ifm-background-color: var(--site-background);
+  --ifm-background-surface-color: var(--site-surface);
+  --ifm-font-color-base: var(--site-text);
+  --ifm-color-content-secondary: var(--site-muted);
+  --ifm-font-family-base: var(--site-font-body);
+  --ifm-heading-font-family: var(--site-font-heading);
+  --ifm-font-family-monospace: var(--site-font-mono);
+  --ifm-font-size-base: 100%;
+  --ifm-line-height-base: 1.72;
+  --ifm-heading-font-weight: var(--site-heading-weight);
+  --ifm-global-radius: var(--site-radius);
+  --ifm-global-border-width: var(--site-border-width);
+  --ifm-navbar-shadow: var(--site-navbar-shadow);
+  --ifm-navbar-background-color: var(--site-background);
+  --ifm-toc-border-color: var(--site-border);
+  --ifm-color-emphasis-200: var(--site-border);
+  --ifm-color-emphasis-300: var(--site-border);
+  --ifm-code-font-size: 92%;
+}
+
+html,
+body {
+  background: var(--site-background);
+  color: var(--site-text);
+}
+
+/* Unmind: a clean institutional document whose edges do not remain entirely stable. */
+.navbar {
+  border-bottom: var(--site-border-width) solid var(--site-border);
+}
+
+.navbar__title {
+  font-family: var(--site-font-mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.theme-doc-markdown {
+  max-width: var(--site-content-width);
+}
+
+.theme-doc-markdown > h1:first-child {
+  margin-bottom: 2rem;
+  letter-spacing: -0.025em;
+}
+
+.theme-doc-markdown > h1:first-child::before {
+  content: 'UNMIND // CLINICAL RECORD';
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--site-muted);
+  font-family: var(--site-font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.theme-doc-markdown h2 {
+  margin-top: 2.7rem;
+  padding-bottom: 0.42rem;
+  border-bottom: var(--site-border-width) solid var(--site-border);
+  letter-spacing: -0.015em;
+}
+
+.theme-doc-markdown h3 {
+  font-family: var(--site-font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.theme-doc-markdown p,
+.theme-doc-markdown li {
+  font-size: 1.035rem;
+}
+
+.theme-doc-markdown blockquote {
+  margin: 1.8rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--site-primary);
+  background: color-mix(in srgb, var(--site-surface) 78%, transparent);
+  color: var(--site-text);
+}
+
+.theme-doc-markdown table {
+  border-collapse: collapse;
+  box-shadow: none;
+}
+
+.theme-doc-markdown table thead tr {
+  background: var(--site-surface);
+}
+
+.theme-doc-markdown table th {
+  color: var(--site-muted);
+  font-family: var(--site-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.theme-doc-markdown table td,
+.theme-doc-markdown table th {
+  border-color: var(--site-border);
+}
+
+.alert {
+  border: var(--site-border-width) solid var(--site-border);
+  border-left-width: 4px;
+  border-radius: var(--site-radius);
+  box-shadow: none;
+}
+
+.menu__link,
+.table-of-contents__link {
+  font-size: 0.92rem;
+}
+
+.table-of-contents {
+  border-left-color: var(--site-border);
+}
+
+.theme-doc-footer,
+.pagination-nav {
+  border-color: var(--site-border);
+}
+
+.pagination-nav__link {
+  border-color: var(--site-border);
+  border-radius: var(--site-radius);
+}
+
+.footer--dark {
+  --ifm-footer-background-color: color-mix(in srgb, var(--site-background) 78%, black);
+}
+
+@media (min-width: 997px) {
+  .theme-doc-sidebar-container {
+    border-right-color: var(--site-border) !important;
+  }
+}

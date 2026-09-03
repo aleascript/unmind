@@ -1,5 +1,25 @@
 # Unmind
 
-Unmind is a short, closed and demanding tabletop role-playing game designed with Resonance.
+Public bilingual rules site for **Unmind**, built with the Resonance site template and Docusaurus.
 
-This repository is being initialized from the Resonance site template. The public site and bilingual game material will be added in the following commits.
+## Local development
+
+```bash
+npm install
+npm run start:en
+npm run start:fr
+```
+
+To preview the complete bilingual site as it will be deployed:
+
+```bash
+npm run preview
+```
+
+Validate types and both locales:
+
+```bash
+npm run check
+```
+
+The canonical working rules currently live in Notion. Reader-facing material is consolidated into `docs/en/` and `docs/fr/`.
