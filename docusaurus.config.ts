@@ -21,6 +21,15 @@ function projectLink(label: string, href: string): string {
 function footerCredit(): string {
   const credits = [`© ${new Date().getFullYear()} ${site.author}`];
 
+  if (site.license) {
+    credits.push(
+      `Game content licensed under ${projectLink(
+        site.license.label,
+        site.license.href,
+      )}`,
+    );
+  }
+
   if (site.lineage.designedWith) {
     credits.push(
       `designed with ${projectLink(
