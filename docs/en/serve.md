@@ -1,7 +1,7 @@
 ---
-id: servir
+id: serve
 title: Serve
-slug: /booklets/servir
+slug: /booklets/serve
 ---
 
 # Serve

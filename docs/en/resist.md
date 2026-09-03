@@ -1,7 +1,7 @@
 ---
-id: resister
+id: resist
 title: Resist
-slug: /booklets/resister
+slug: /booklets/resist
 ---
 
 # Resist

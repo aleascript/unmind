@@ -116,12 +116,12 @@ Les couleurs exactes restent libres, mais leur correspondance doit être identiq
 
 Chaque joueur choisit un livret différent :
 
-- [Veiller](veiller.md) ;
-- [Servir](servir.md) ;
-- [Plaire](plaire.md) ;
-- [S’effacer](s-effacer.md) ;
-- [Ordonner](ordonner.md) ;
-- [Résister](resister.md).
+- [Veiller](watch.md) ;
+- [Servir](serve.md) ;
+- [Plaire](please.md) ;
+- [S’effacer](fade.md) ;
+- [Ordonner](order.md) ;
+- [Résister](resist.md).
 
 Le livret désigne un geste humain par lequel le personnage tente encore de vivre avec les autres. Ce geste peut protéger, relier ou sauver. Il peut aussi devenir sa seule manière disponible de répondre au monde.
 

@@ -1,7 +1,7 @@
 ---
-id: plaire
+id: please
 title: Please
-slug: /booklets/plaire
+slug: /booklets/please
 ---
 
 # Please

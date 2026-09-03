@@ -1,7 +1,7 @@
 ---
-id: ordonner
+id: order
 title: Order
-slug: /booklets/ordonner
+slug: /booklets/order
 ---
 
 # Order

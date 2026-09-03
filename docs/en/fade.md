@@ -1,7 +1,7 @@
 ---
-id: s-effacer
+id: fade
 title: Fade
-slug: /booklets/s-effacer
+slug: /booklets/fade
 ---
 
 # Fade
