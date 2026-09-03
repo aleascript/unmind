@@ -6,7 +6,7 @@ function DesignAdmonition(props) {
 
   return (
     <div className="theme-admonition-design">
-      <Note {...props} />
+      <Note {...props} type="note" />
     </div>
   );
 }
