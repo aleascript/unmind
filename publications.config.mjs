@@ -32,7 +32,7 @@ export default definePublications({
       size: 'A5',
       theme: 'publication/theme.css',
       cover: {
-        image: 'static/img/site/unmind_indigo_200.png',
+        image: 'static/img/site/unmind_black_600x200.png',
         showTitle: false,
         showMetadata: true,
       },

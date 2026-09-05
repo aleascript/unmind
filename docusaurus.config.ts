@@ -121,6 +121,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
+      title: site.title,
       ...(site.identity.logo
         ? {logo: {alt: `${site.title} logo`, src: site.identity.logo}}
         : {}),
