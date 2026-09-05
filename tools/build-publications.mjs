@@ -460,6 +460,9 @@ async function preparePublication(
     entry: entries,
     entryContext: publicationWorkDir,
     theme: themeDestination,
+    vfm: {
+      rewriteRelativeHrefExtensions: true,
+    },
     toc: {
       title: localeConfig.tocTitle ?? (locale === 'fr' ? 'Sommaire' : 'Contents'),
       sectionDepth: 2,
