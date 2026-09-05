@@ -16,7 +16,7 @@ Unmind uses the Markdown files in `docs/` as the canonical editorial source for 
 8. Order;
 9. Resist.
 
-The output name is `unmind`; each locale currently produces PDF only. The cover uses the existing Unmind logo and deliberately hides the generated cover title so the word **Unmind** is not repeated.
+The output name is `unmind`; each locale currently produces PDF only. The cover uses the black Unmind publication logo and deliberately hides the generated cover title so the word **Unmind** is not repeated.
 
 The publication keeps the project metadata already used by the site: AleaScript as author, CC BY 4.0, and `designed with Resonance` with no powered-by credit. `revision` is editorial metadata and currently remains `Draft`.
 
@@ -65,12 +65,13 @@ This copies the complete publication directory into `build/downloads/`.
 
 `tools/build-publications.mjs` is shared with the current `resonance-site-template` implementation. It transforms only temporary publication copies; authored Markdown is never rewritten.
 
-Supported Docusaurus admonitions are `note`, `tip`, `info`, `warning`, `danger`, plus the configured `design` type. Unsupported directives fail the build rather than degrading silently.
+Supported Docusaurus admonitions are `note`, `tip`, `info`, `warning`, `danger`, `caution`, plus the configured `design` type. Unsupported directives fail the build rather than degrading silently.
 
 The shared builder also:
 
 - inserts an H1 from frontmatter `title` when a source document has no explicit H1;
-- rewrites root-relative Markdown and HTML image paths so assets under `static/` remain portable in generated publications.
+- rewrites root-relative Markdown and HTML image paths so assets under `static/` remain portable in generated publications;
+- rewrites relative Markdown document links to their generated HTML targets so links between chapters remain internal PDF destinations instead of preview-server URLs.
 
 ## Publication identity
 
