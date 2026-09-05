@@ -9,7 +9,7 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 const workRoot = path.join(projectRoot, '.publication-workspace');
 const outputRoot = path.join(projectRoot, 'dist', 'publications');
 
-const standardAdmonitions = ['note', 'tip', 'info', 'warning', 'danger'];
+const standardAdmonitions = ['note', 'tip', 'info', 'warning', 'danger', 'caution'];
 const defaultTitles = {
   en: {
     note: 'Note',
@@ -17,6 +17,7 @@ const defaultTitles = {
     info: 'Info',
     warning: 'Warning',
     danger: 'Danger',
+    caution: 'Caution',
     design: 'Design note',
   },
   fr: {
@@ -25,6 +26,7 @@ const defaultTitles = {
     info: 'Information',
     warning: 'Attention',
     danger: 'Danger',
+    caution: 'Prudence',
     design: 'Note de design',
   },
 };
