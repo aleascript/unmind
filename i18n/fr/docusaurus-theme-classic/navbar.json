@@ -3,6 +3,10 @@
     "message": "Sommaire",
     "description": "Navbar item with label Contents"
   },
+  "item.label.Publications": {
+    "message": "Publications",
+    "description": "Navbar item with label Publications"
+  },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
