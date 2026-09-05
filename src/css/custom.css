@@ -161,6 +161,65 @@ body {
   border-radius: var(--site-radius);
 }
 
+.publications-page {
+  max-width: var(--site-content-width);
+}
+
+.publications-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--site-border-width) solid var(--site-border);
+}
+
+.publications-header > h1 {
+  margin-bottom: 0.5rem;
+}
+
+.publications-header > h1::before {
+  content: 'UNMIND // RELEASE ARCHIVE';
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--site-muted);
+  font-family: var(--site-font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.publications-version,
+.publication-revision {
+  color: var(--site-muted);
+  font-family: var(--site-font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.publications-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.publication-card {
+  padding: 1.25rem;
+  border: var(--site-border-width) solid var(--site-border);
+  border-radius: var(--site-radius);
+  background: var(--site-surface);
+  box-shadow: none;
+}
+
+.publication-card > h2 {
+  margin-bottom: 0.35rem;
+}
+
+.publication-formats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
 .footer--dark {
   --ifm-footer-background-color: color-mix(in srgb, var(--site-background) 78%, black);
 }
