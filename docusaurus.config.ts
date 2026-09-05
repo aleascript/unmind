@@ -86,6 +86,9 @@ const config: Config = {
   },
   customFields: {
     visualTheme: site.theme,
+    // Docusaurus localizes siteConfig.baseUrl for non-default locales. Keep the
+    // actual deployment root available for shared, non-localized assets.
+    deploymentBaseUrl: baseUrl,
   },
   i18n: {
     defaultLocale: site.defaultLocale,
@@ -106,7 +109,6 @@ const config: Config = {
           },
         },
         blog: false,
-        pages: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -124,6 +126,7 @@ const config: Config = {
         : {}),
       items: [
         {type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Contents'},
+        {to: '/publications/', label: 'Publications', position: 'left'},
         {type: 'localeDropdown', position: 'right', queryString: '?persistLocale=true'},
         {href: repositoryUrl, label: 'GitHub', position: 'right'},
       ],
