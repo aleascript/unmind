@@ -1,0 +1,306 @@
+@page {
+  size: A5;
+  margin: 17mm 15mm 19mm;
+
+  @bottom-left {
+    content: 'UNMIND // CLINICAL RECORD';
+    color: #69736f;
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+    font-size: 6.5pt;
+    letter-spacing: 0.08em;
+  }
+
+  @bottom-right {
+    content: counter(page);
+    color: #69736f;
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+    font-size: 7pt;
+  }
+}
+
+@page:first {
+  @bottom-left {
+    content: none;
+  }
+
+  @bottom-right {
+    content: none;
+  }
+}
+
+:root {
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  font-size: 9.8pt;
+  line-height: 1.55;
+  color: #252a28;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  line-height: 1.18;
+  break-after: avoid;
+}
+
+h1 {
+  margin: 0 0 0.95em;
+  padding-bottom: 0.38em;
+  border-bottom: 0.6pt solid #b8c0bb;
+  font-size: 22pt;
+  letter-spacing: -0.01em;
+}
+
+h1::before {
+  display: block;
+  margin-bottom: 0.65em;
+  color: #69736f;
+  content: 'UNMIND // CLINICAL RECORD';
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  font-size: 6.5pt;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+
+h2 {
+  margin-top: 1.8em;
+  padding-bottom: 0.25em;
+  border-bottom: 0.5pt solid #d3d8d4;
+  font-size: 14.5pt;
+}
+
+h3 {
+  margin-top: 1.45em;
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 10.5pt;
+}
+
+section.level1 {
+  break-before: page;
+}
+
+body > section.level1:first-of-type {
+  break-before: auto;
+}
+
+p,
+li {
+  orphans: 3;
+  widows: 3;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: #69736f;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.12em;
+}
+
+blockquote {
+  margin: 1.25em 0;
+  padding: 0.8em 1em;
+  border-inline-start: 2.5pt solid #4f6a61;
+  background: #f0f2ef;
+  break-inside: avoid;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.publication-admonition-title {
+  display: inline-block;
+  margin-bottom: 0.3em;
+  color: #4f6a61;
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+blockquote:has(.publication-admonition-note),
+blockquote:has(.publication-admonition-info),
+blockquote:has(.publication-admonition-tip),
+blockquote:has(.publication-admonition-warning),
+blockquote:has(.publication-admonition-danger),
+blockquote:has(.publication-admonition-design) {
+  border-inline-start-color: #4f6a61;
+  background: #f0f2ef;
+}
+
+blockquote:has(.publication-admonition-danger) {
+  border-inline-start-color: #6d514b;
+  background: #f3eeec;
+}
+
+blockquote:has(.publication-admonition-danger) .publication-admonition-title {
+  color: #6d514b;
+}
+
+.publication-admonition-title::before {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 0.5em;
+  border: 0.1em solid currentColor;
+  content: '';
+  vertical-align: -0.02em;
+}
+
+.publication-admonition-danger::before,
+.publication-admonition-warning::before {
+  border-radius: 50%;
+}
+
+table {
+  width: 100%;
+  margin: 1.2em 0;
+  border-collapse: collapse;
+  font-size: 8.8pt;
+}
+
+thead {
+  background: #e7e9e4;
+}
+
+th,
+td {
+  padding: 0.42em 0.55em;
+  border: 0.5pt solid #b8c0bb;
+  vertical-align: top;
+}
+
+th {
+  color: #56615c;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.publication-cover-page {
+  box-sizing: border-box;
+  display: flex;
+  min-height: calc(100vh - 36mm);
+  padding: 7mm;
+  border: 0.8pt solid #b8c0bb;
+  flex-direction: column;
+  align-items: stretch;
+  background: #f7f7f3;
+  text-align: center;
+}
+
+.publication-cover-page::before {
+  display: block;
+  margin-bottom: 8mm;
+  color: #69736f;
+  content: 'PATIENT MATERIAL // CONTROLLED CIRCULATION';
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  font-size: 6.5pt;
+  letter-spacing: 0.16em;
+}
+
+.publication-cover-title {
+  display: none;
+}
+
+.publication-cover-page [role='doc-cover'] {
+  display: block;
+  width: 72%;
+  max-height: 78mm;
+  margin: auto auto 10mm;
+  object-fit: contain;
+}
+
+.publication-cover-metadata {
+  margin-top: auto;
+  padding-top: 5mm;
+  border-top: 0.5pt solid #b8c0bb;
+  color: #56615c;
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  font-size: 7.4pt;
+  line-height: 1.5;
+}
+
+.publication-cover-author {
+  margin-bottom: 0.45em;
+  color: #252a28;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.publication-cover-edition,
+.publication-cover-license,
+.publication-cover-lineage {
+  margin-top: 0.25em;
+}
+
+nav[role='doc-toc'] {
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+}
+
+nav[role='doc-toc']::before {
+  display: block;
+  margin-bottom: 1.4em;
+  color: #69736f;
+  content: 'INDEX // AUTHORISED CONTENT';
+  font-size: 6.5pt;
+  letter-spacing: 0.15em;
+}
+
+nav[role='doc-toc'] ol {
+  padding-inline-start: 1.35em;
+}
+
+nav[role='doc-toc'] a {
+  text-decoration: none;
+}
+
+@media print {
+  nav[role='doc-toc'] a {
+    display: inline-flex;
+    width: 100%;
+    align-items: baseline;
+  }
+
+  nav[role='doc-toc'] a::before {
+    order: 1;
+    flex: auto;
+    margin-inline: 0.5em;
+    border-bottom: 0.5pt dotted #9aa39e;
+    content: '';
+  }
+
+  nav[role='doc-toc'] a::after {
+    order: 2;
+    flex: none;
+    align-self: flex-end;
+    content: target-counter(attr(href), page);
+    text-align: right;
+  }
+}
