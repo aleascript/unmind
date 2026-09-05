@@ -11,10 +11,8 @@ Add the full publication and release pipeline to **Unmind**, using the current `
 The result must publish the existing EN/FR Unmind corpus as:
 
 - PDF — mandatory;
-- EPUB;
-- WebPub served by the site;
 - a `/publications/` catalogue page;
-- GitHub Release assets for PDF, EPUB and `publications.json`;
+- GitHub Release assets for PDF and `publications.json`;
 - a Semantic Release based repository-wide publication version.
 
 Do not redesign or rewrite the game content as part of this migration.
@@ -30,7 +28,7 @@ Before changing anything:
 2. Compare the publication implementation in Regard with the template. Regard has already exposed generic issues that may not yet have been upstreamed to the template.
 3. In particular, verify whether the template builder already contains the generic fixes used by Regard for:
    - adding a Markdown H1 from frontmatter when a source page has no explicit H1;
-   - rewriting root-relative Markdown/HTML image paths such as `/img/...` so they remain portable in PDF/EPUB/WebPub.
+   - rewriting root-relative Markdown/HTML image paths such as `/img/...` so they remain portable in PDF.
 4. If a fix is genuinely generic and still exists only in Regard, prefer a small PR to `resonance-site-template` first, then consume the improved template from Unmind rather than copying a divergence.
 
 Do not cherry-pick the historical template PR sequence. Port the **current learned state** intentionally.
@@ -45,7 +43,7 @@ Current project metadata in `site.config.ts`:
 - locales: EN + FR, English default;
 - license metadata: CC BY 4.0;
 - lineage: designed with Resonance, no `poweredBy`;
-- identity has no logo and no favicon;
+- identity has a logo (it will be the image of the PDF but dont repeat the text UNMIND because it is on the logo)
 - visual identity is restrained, clinical and institutional: desaturated green/grey, Arial/Helvetica body, Georgia headings, small radius and thin borders.
 
 Do not turn the publication into a generic Resonance recolor. The print identity should feel like **Unmind**: austere, controlled, clinical, slightly oppressive, readable.
@@ -67,21 +65,6 @@ Use the current sidebar order as the initial editorial intent unless the source 
 9. `docs/<locale>/resist.md`
 
 The web navigation and book composition must remain independent after migration.
-
-## Important Unmind-specific design test: cover without a logo
-
-Unmind currently has no logo. **Do not invent one merely because the publication builder expects an image.**
-
-Prefer a typographic / clinical cover using the existing identity. If the current generic builder requires `cover.image`, treat that as an abstraction problem:
-
-- extend the generic publication cover mechanism so a cover image is optional;
-- support a text-only cover cleanly;
-- upstream that capability to `resonance-site-template` if it is generic;
-- then use it in Unmind.
-
-This is an intended template stress test.
-
-A5 is a reasonable starting format for this short closed game, but validate the actual result visually rather than treating the size as doctrine.
 
 ## Infrastructure to port
 
@@ -153,7 +136,7 @@ Do not merge merely because Vivliostyle exits successfully.
 The implementation conversation must:
 
 1. run typecheck and localized Docusaurus builds;
-2. build PDF + EPUB + WebPub for EN and FR;
+2. build PDF for EN and FR;
 3. inspect the generated PDFs visually, including cover, TOC, page breaks, typography, any admonitions and any images;
 4. make the actual EN/FR PDF artifacts available for review before merge;
 5. verify PR Semantic Release dry-run behavior;
