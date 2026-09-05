@@ -1,4 +1,4 @@
-name: Build and deploy site
+name: Build, release and deploy site
 
 on:
   push:
@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
@@ -34,19 +36,145 @@ jobs:
       - name: Build localized site
         run: npm run build
 
+      - name: Build publications
+        run: npm run publication:build
+
+      - name: Upload validation publication artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-publications
+          path: dist/publications
+          if-no-files-found: error
+
+  release-check:
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PR head
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Simulate semantic baseline for dry run
+        run: |
+          if ! git tag --list 'v[0-9]*' | grep -q .; then
+            git tag v0.0.0 origin/main
+          fi
+
+      - name: Validate Semantic Release configuration
+        uses: cycjimmy/semantic-release-action@v6
+        with:
+          semantic_version: 25.0.9
+          extra_plugins: |
+            @semantic-release/exec@7.1.0
+          branches: '["${{ github.head_ref }}"]'
+          dry_run: true
+          unset_gha_env: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  release:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Detect initial release
+        id: release-state
+        shell: bash
+        run: |
+          if git tag --list 'v[0-9]*' | grep -q .; then
+            echo "bootstrap=false" >> "$GITHUB_OUTPUT"
+          else
+            version=$(node --input-type=module -e "import config from './publications.config.mjs'; process.stdout.write(config.release?.initialVersion ?? '0.1.0')")
+            echo "bootstrap=true" >> "$GITHUB_OUTPUT"
+            echo "version=$version" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Prepare initial release
+        if: steps.release-state.outputs.bootstrap == 'true'
+        run: npm run release:prepare -- "${{ steps.release-state.outputs.version }}"
+
+      - name: Create initial GitHub Release
+        if: steps.release-state.outputs.bootstrap == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.release-state.outputs.version }}
+        shell: bash
+        run: |
+          assets=(dist/publications/*.pdf dist/publications/publications.json)
+          existing_assets=()
+          for asset in "${assets[@]}"; do
+            if [[ -f "$asset" ]]; then
+              existing_assets+=("$asset")
+            fi
+          done
+
+          gh release create "v${VERSION}" \
+            "${existing_assets[@]}" \
+            --target "$GITHUB_SHA" \
+            --title "v${VERSION}" \
+            --generate-notes
+
+      - name: Semantic Release
+        if: steps.release-state.outputs.bootstrap != 'true'
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v6
+        with:
+          semantic_version: 25.0.9
+          extra_plugins: |
+            @semantic-release/exec@7.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build current corpus when no release is required
+        if: >-
+          steps.release-state.outputs.bootstrap != 'true' &&
+          steps.semantic.outputs.new_release_published != 'true'
+        run: |
+          npm run publication:build
+          npm run build
+          npm run publication:site
+
+      - name: Upload deployed publication artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: publications
+          path: dist/publications
+          if-no-files-found: error
+
       - name: Configure GitHub Pages
-        if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v5
 
       - name: Upload GitHub Pages artifact
-        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v4
         with:
           path: build
 
   deploy:
-    if: github.ref == 'refs/heads/main'
-    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: release
     permissions:
       pages: write
       id-token: write

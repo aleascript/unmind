@@ -1,7 +1,10 @@
 node_modules/
 build/
+dist/
 .docusaurus/
 .cache-loader/
+.publication-workspace/
+.vivliostyle/
 *.log
 .DS_Store
 .env
