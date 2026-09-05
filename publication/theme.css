@@ -145,17 +145,20 @@ blockquote:has(.publication-admonition-info),
 blockquote:has(.publication-admonition-tip),
 blockquote:has(.publication-admonition-warning),
 blockquote:has(.publication-admonition-danger),
+blockquote:has(.publication-admonition-caution),
 blockquote:has(.publication-admonition-design) {
   border-inline-start-color: #4f6a61;
   background: #f0f2ef;
 }
 
-blockquote:has(.publication-admonition-danger) {
+blockquote:has(.publication-admonition-danger),
+blockquote:has(.publication-admonition-caution) {
   border-inline-start-color: #6d514b;
   background: #f3eeec;
 }
 
-blockquote:has(.publication-admonition-danger) .publication-admonition-title {
+blockquote:has(.publication-admonition-danger) .publication-admonition-title,
+blockquote:has(.publication-admonition-caution) .publication-admonition-title {
   color: #6d514b;
 }
 
@@ -171,7 +174,8 @@ blockquote:has(.publication-admonition-danger) .publication-admonition-title {
 }
 
 .publication-admonition-danger::before,
-.publication-admonition-warning::before {
+.publication-admonition-warning::before,
+.publication-admonition-caution::before {
   border-radius: 50%;
 }
 
@@ -262,11 +266,13 @@ th {
 
 nav[role='doc-toc'] {
   font-family: Arial, 'Helvetica Neue', sans-serif;
+  font-size: 8.8pt;
+  line-height: 1.32;
 }
 
 nav[role='doc-toc']::before {
   display: block;
-  margin-bottom: 1.4em;
+  margin-bottom: 1em;
   color: #69736f;
   content: 'INDEX // AUTHORISED CONTENT';
   font-size: 6.5pt;
@@ -274,7 +280,8 @@ nav[role='doc-toc']::before {
 }
 
 nav[role='doc-toc'] ol {
-  padding-inline-start: 1.35em;
+  margin-block: 0.35em;
+  padding-inline-start: 1.2em;
 }
 
 nav[role='doc-toc'] a {
