@@ -68,7 +68,8 @@ export const site = {
     defaultFullName: 'aleascript/unmind',
   },
   identity: {
-    logo: null,
+    logo: 'img/site/unmind_black_600x200.png',
+    logoDark: 'img/site/unmind_white_600x200.png',
     favicon: null,
   },
   license: {
