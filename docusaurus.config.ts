@@ -121,6 +121,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
+      // An empty title prevents Docusaurus from rendering the site title next
+      // to the logo while keeping site.title available for metadata.
+      title: '',
       ...(site.identity.logo
         ? {
             logo: {
