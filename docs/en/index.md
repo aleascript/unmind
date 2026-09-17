@@ -5,7 +5,9 @@ slug: /
 sidebar_position: 1
 ---
 
-# Unmind
+import ThemeLogo from '@site/src/components/ThemeLogo';
+
+<ThemeLogo />
 
 > **You are not here by mistake.**
 
