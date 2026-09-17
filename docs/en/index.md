@@ -6,9 +6,7 @@ sidebar_position: 1
 hide_title: true
 ---
 
-import ThemeLogo from '@site/src/components/ThemeLogo';
-
-<ThemeLogo />
+![Unmind page logo](/img/site/unmind_black_600x200.png)
 
 > **You are not here by mistake.**
 
