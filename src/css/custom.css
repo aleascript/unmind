@@ -46,6 +46,17 @@ body {
   text-transform: uppercase;
 }
 
+.theme-logo {
+  display: block;
+  margin: 0 0 2rem;
+}
+
+.theme-logo__image {
+  display: block;
+  width: min(100%, 18rem);
+  height: auto;
+}
+
 .theme-doc-markdown {
   max-width: var(--site-content-width);
 }
