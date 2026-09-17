@@ -3,9 +3,10 @@ id: index
 title: Unmind
 slug: /
 sidebar_position: 1
+hide_title: true
 ---
 
-# Unmind
+![](/img/site/unmind_black.png)
 
 > **Vous n’êtes pas ici par erreur.**
 

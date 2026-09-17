@@ -121,9 +121,17 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: site.title,
+      // An empty title prevents Docusaurus from rendering the site title next
+      // to the logo while keeping site.title available for metadata.
+      title: '',
       ...(site.identity.logo
-        ? {logo: {alt: `${site.title} logo`, src: site.identity.logo}}
+        ? {
+            logo: {
+              alt: `${site.title} logo`,
+              src: site.identity.logo,
+              srcDark: site.identity.logoDark ?? site.identity.logo,
+            },
+          }
         : {}),
       items: [
         {type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Contents'},

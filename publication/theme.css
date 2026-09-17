@@ -113,6 +113,15 @@ a {
   text-underline-offset: 0.12em;
 }
 
+body:not(.publication-cover-document) img[src*='unmind_black'] {
+  display: block;
+  width: 72%;
+  max-width: 100%;
+  height: auto;
+  margin: 1.2em auto 1.6em;
+  object-fit: contain;
+}
+
 blockquote {
   margin: 1.25em 0;
   padding: 0.8em 1em;

@@ -193,9 +193,12 @@ function ensureDocumentTitleHeading(markdown) {
     return markdown;
   }
 
-  const titleLine = frontmatter[1]
-    .split(/\r?\n/)
-    .find((line) => /^title\s*:/.test(line));
+  const frontmatterLines = frontmatter[1].split(/\r?\n/);
+  if (frontmatterLines.some((line) => /^hide_title\s*:\s*true\s*$/i.test(line))) {
+    return markdown;
+  }
+
+  const titleLine = frontmatterLines.find((line) => /^title\s*:/.test(line));
   if (!titleLine) {
     return markdown;
   }
