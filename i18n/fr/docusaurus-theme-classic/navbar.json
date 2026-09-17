@@ -1,8 +1,4 @@
 {
-  "title": {
-    "message": "Unmind",
-    "description": "The title in the navbar"
-  },
   "item.label.Contents": {
     "message": "Sommaire",
     "description": "Navbar item with label Contents"
