@@ -46,15 +46,15 @@ body {
   text-transform: uppercase;
 }
 
-.theme-doc-markdown img[src*='unmind_black_600x200'] {
+.theme-doc-markdown img[src*='unmind_black'] {
   display: block;
   width: min(100%, 18rem);
   height: auto;
   margin: 0 0 2rem;
 }
 
-html[data-theme='dark'] .theme-doc-markdown img[src*='unmind_black_600x200'] {
-  content: url('/img/site/unmind_white_600x200.png');
+html[data-theme='dark'] .theme-doc-markdown img[src*='unmind_black'] {
+  content: url('/img/site/unmind_white.png');
 }
 
 .theme-doc-markdown {

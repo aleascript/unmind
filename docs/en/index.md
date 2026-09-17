@@ -6,7 +6,7 @@ sidebar_position: 1
 hide_title: true
 ---
 
-![](/img/site/unmind_black_600x200.png)
+![](/img/site/unmind_black.png)
 
 > **You are not here by mistake.**
 
