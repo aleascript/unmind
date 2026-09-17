@@ -3,6 +3,7 @@ id: index
 title: Unmind
 slug: /
 sidebar_position: 1
+hide_title: true
 ---
 
 import ThemeLogo from '@site/src/components/ThemeLogo';
