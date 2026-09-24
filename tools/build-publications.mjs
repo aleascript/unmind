@@ -449,10 +449,21 @@ async function preparePublication(
     themeDestination,
     version,
   );
+  const blankPage = '<div class="publication-blank-page" aria-hidden="true"></div>\n';
+  const blankFront = 'publication-blank-front.md';
+  const blankBackOne = 'publication-blank-back-1.md';
+  const blankBackTwo = 'publication-blank-back-2.md';
+
+  await fs.writeFile(path.join(publicationWorkDir, blankFront), blankPage, 'utf8');
+  await fs.writeFile(path.join(publicationWorkDir, blankBackOne), blankPage, 'utf8');
+  await fs.writeFile(path.join(publicationWorkDir, blankBackTwo), blankPage, 'utf8');
+
   const entries = [
-    ...(cover ? [cover.entry] : []),
+    ...(cover ? [cover.entry, blankFront] : []),
     {rel: 'contents'},
     ...contentEntries,
+    blankBackOne,
+    blankBackTwo,
   ];
 
   const task = {
