@@ -43,6 +43,7 @@
 
 @page publication-blank {
   margin: 0;
+  background: #fff;
 
   @top-center {
     content: none;
@@ -72,8 +73,7 @@ body {
   page: publication-blank;
   width: 100%;
   height: 100vh;
-  break-before: page;
-  break-after: page;
+  background: #fff;
 }
 
 h1,
