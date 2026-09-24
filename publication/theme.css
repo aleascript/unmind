@@ -58,6 +58,23 @@
   }
 }
 
+@page publication-cover {
+  size: A5;
+  margin: 15mm;
+
+  @top-center {
+    content: none;
+  }
+
+  @bottom-left {
+    content: none;
+  }
+
+  @bottom-right {
+    content: none;
+  }
+}
+
 :root {
   font-family: Arial, 'Helvetica Neue', sans-serif;
   font-size: 9.8pt;
@@ -254,9 +271,12 @@ th {
 }
 
 .publication-cover-page {
+  page: publication-cover;
   box-sizing: border-box;
   display: flex;
-  min-height: calc(100vh - 36mm);
+  width: 100%;
+  height: 180mm;
+  min-height: 180mm;
   padding: 7mm;
   border: 0.8pt solid #b8c0bb;
   flex-direction: column;
