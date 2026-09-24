@@ -2,6 +2,15 @@
   size: A5;
   margin: 17mm 15mm 19mm;
 
+  @top-center {
+    content: string(publication-chapter);
+    color: #69736f;
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
   @bottom-left {
     content: 'UNMIND // CLINICAL RECORD';
     color: #69736f;
@@ -19,6 +28,26 @@
 }
 
 @page:first {
+  @top-center {
+    content: none;
+  }
+
+  @bottom-left {
+    content: none;
+  }
+
+  @bottom-right {
+    content: none;
+  }
+}
+
+@page publication-blank {
+  margin: 0;
+
+  @top-center {
+    content: none;
+  }
+
   @bottom-left {
     content: none;
   }
@@ -39,6 +68,14 @@ body {
   margin: 0;
 }
 
+.publication-blank-page {
+  page: publication-blank;
+  width: 100%;
+  height: 100vh;
+  break-before: page;
+  break-after: page;
+}
+
 h1,
 h2,
 h3,
@@ -50,6 +87,7 @@ h4 {
 }
 
 h1 {
+  string-set: publication-chapter content(text);
   margin: 0 0 0.95em;
   padding-bottom: 0.38em;
   border-bottom: 0.6pt solid #b8c0bb;
